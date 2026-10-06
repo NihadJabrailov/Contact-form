@@ -5,11 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Hello World</h1>
+    <div class="containerCard">
+        <div class="inputCard">
+            <h1 class="h1Text">Contact Us</h1>
+
+            <form id="contactForm">
+                <div class="nameGroup">
+                    <div class="containerInput">
+                        <label class="pharagraphText" for="firstName">First Name*</label>
+                        <input id="firstName" class="input" type="text">
+                        <span class="errorText" id="firstNameError">This field is required</span>
+                    </div>
+
+                    <div class="containerInput">
+                        <label class="pharagraphText" for="lastName">Last Name*</label>
+                        <input id="lastName" class="input" type="text">
+                        <span class="errorText" id="lastNameError">This field is required!</span>
+                    </div>
+                </div>
+
+                <div class="containerInput">
+                    <label class="pharagraphText" for="email">Email*</label>
+                    <input id="email" class="input" type="text">
+                    <span class="errorText" id="emailError">Please enter a valid email address!</span>
+                </div>
+
+                <div class="containerInput">
+                    <label class="pharagraphText">Query Type*</label>
+                    <div class="radioGroup">
+                        <label class="radioCard" for="general">
+                            <input type="radio" id="general" name="queryType" value="general">
+                            <span class="radioLabel">General Enquiry</span>
+                        </label>
+                        <label class="radioCard" for="support">
+                            <input type="radio" id="support" name="queryType" value="support">
+                            <span class="radioLabel">Support Request</span>
+                        </label>
+                    </div>
+                    <span class="errorText" id="radioError">This field is required!</span>
+                </div>
+
+                <div class="containerInput">
+                    <label class="pharagraphText" for="message">Message*</label>
+                    <textarea id="message" class="input" cols="30" rows="15" style="border-radius: 12px;"></textarea>
+                    <span class="errorText" id="messageError">This field is required!</span>
+                </div>
+
+                <div class="containerCheckbox">
+                    <input type="checkbox" id="consent" name="consent">
+                    <label class="pharagraphText" for="consent">I consent to begin contacted by the team*</label>
+                    <span class="errorText" id="chackboxError">To submit this form, please consent to being
+                        contacted!</span>
+                </div>
+
+                <button type="submit" id="submitBtn" class="submitButton">Submit Message</button>
+            </form>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 
